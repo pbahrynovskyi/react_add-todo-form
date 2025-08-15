@@ -46,8 +46,7 @@ export const App = () => {
       return;
     }
 
-    const highestId = Math.max(...preparedTodos.map(todo => todo.id), 0);
-
+    const highestId = Math.max(0, ...visibleTodos.map(todo => todo.id));
     const newTodo = {
       id: highestId + 1,
       title,
